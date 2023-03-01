@@ -98,7 +98,7 @@ $ bundle init
 
 $ bundle install (install dependencies)
 
-$ ruby morseCode.rb (run the app locally)
+$ ruby morse_code.rb (run the app locally)
 ```
 ### Usage
 

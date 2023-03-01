@@ -4,7 +4,7 @@ CODE = {
   '-.-.' => 'C',
   '-..' => 'D',
   '.' => 'E',
-  '..-.' => 'F', 
+  '..-.' => 'F',
   '--.' => 'G',
   '....' => 'H',
   '..' => 'I',
@@ -44,14 +44,14 @@ CODE = {
   '---..' => '8',
   '----.' => '9',
   '-----' => '0'
-}
+}.freeze
 
 def letter_decoder(letter)
   CODE[letter]
 end
 
 def word_decoder(word)
-  word = word.split()
+  word = word.split
   result = ''
   word.each do |letter|
     result += letter_decoder(letter)
