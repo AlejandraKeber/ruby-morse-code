@@ -49,3 +49,25 @@ CODE = {
 def letter_decoder(letter)
   CODE[letter]
 end
+
+def word_decoder(word)
+  word = word.split()
+  result = ''
+  word.each do |letter|
+    result += letter_decoder(letter)
+  end
+  result
+end
+
+def sentence_decoder(sentence)
+  words = sentence.split('   ')
+  sentence = ''
+  words.each do |word|
+    sentence += word_decoder(word)
+    sentence += ' '
+  end
+  sentence
+end
+
+# puts sentence_decoder('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+# It prints: A BOX FULL OF RUBIES
